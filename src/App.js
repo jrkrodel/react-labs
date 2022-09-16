@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import RecipeSearch from "./components/RecipeSearch";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends React.Component {
+  state = {
+    pages: [<RecipeSearch />],
+    curPage: null,
+  };
+
+  swapProject(projectIndex) {
+    this.setState({ curPage: projectIndex });
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <h1>React Labs</h1>
+        <div>
+          <button onClick={() => this.swapProject(0)}>Recipe Search</button>
+        </div>
+        {this.state.pages[this.state.curPage]}
+      </div>
+    );
+  }
 }
-
-export default App;
