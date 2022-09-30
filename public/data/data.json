@@ -1,0 +1,27 @@
+[
+  {
+    "id": 0,
+    "name": "TiedCaster",
+    "position": { "x": 30, "y": 30 }
+  },
+  {
+    "id": 1,
+    "name": "Fouver",
+    "position": { "x": 200, "y": 200 }
+  },
+  {
+    "id": 2,
+    "name": "Bob",
+    "position": { "x": 300, "y": 60 }
+  },
+  {
+    "id": 3,
+    "name": "Eahcaster",
+    "position": { "x": 30, "y": 400 }
+  },
+  {
+    "id": 4,
+    "name": "Dan",
+    "position": { "x": 400, "y": 400 }
+  }
+]
