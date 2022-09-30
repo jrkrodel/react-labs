@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles.css";
 
+//circles on map
 export default function MapLocation(props) {
   //   const [active, setActive] = useState(false);
   return (

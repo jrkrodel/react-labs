@@ -1,5 +1,6 @@
 import React from "react";
 
+//displays current distance between points selected
 export default function DistanceDisplay(props) {
   let lastLocation = null;
 

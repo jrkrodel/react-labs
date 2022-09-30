@@ -3,6 +3,7 @@ import "./styles.css";
 import MapLocation from "./MapLocation";
 import DistanceDisplay from "./DistanceDisplay";
 
+//Main component for map
 export default function MapDataLab() {
   const [locations, setLocations] = useState([]);
 
