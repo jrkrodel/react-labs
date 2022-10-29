@@ -1,0 +1,20 @@
+[
+  {
+    "id": 0,
+    "title": "Track A",
+    "artist": "Artist",
+    "url": "music/HappyStrumming.m4a"
+  },
+  {
+    "id": 1,
+    "title": "Track B",
+    "artist": "Artist",
+    "url": "music/HappyStrumming.m4a"
+  },
+  {
+    "id": 2,
+    "title": "Track C",
+    "artist": "Artist",
+    "url": "music/HappyStrumming.m4a"
+  }
+]
