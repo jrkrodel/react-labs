@@ -7,7 +7,7 @@ export default function TaskRow({ rowData, rowNum }) {
     () => ({
       accept: "card",
       drop: (item) => {
-        console.log(item);
+        console.log(isOver, canDrop);
         let moveCommand = new MoveCommand(item.rowNum, rowNum, {
           index: item.index,
           description: item.description,
@@ -17,6 +17,7 @@ export default function TaskRow({ rowData, rowNum }) {
     }),
     []
   );
+
   let tasks = rowData.tasks.map((task, ind) => (
     <Task
       key={task.id}

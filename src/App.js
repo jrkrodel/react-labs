@@ -30,7 +30,7 @@ export default class App extends React.Component {
       <div className="App">
         <DndProvider backend={HTML5Backend}>
           <h1>React Labs</h1>
-          <div>
+          <div className="nav-bar">
             <button onClick={() => this.swapProject(0)}>Recipe Search</button>
             <button onClick={() => this.swapProject(1)}>Animation Lab</button>
             <button onClick={() => this.swapProject(2)}>Map Data Lab</button>
