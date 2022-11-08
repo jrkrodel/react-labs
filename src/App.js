@@ -5,7 +5,9 @@ import AnimLab from "./components/AnimLab/AnimLab";
 import MapDataLab from "./components/MapDataLab/MapDataLab";
 import BagLab from "./components/BagLab/BagLab";
 import MusicPlayer from "./components/MusicPlayerLab/MusicPlayer";
-
+import FakeKanban from "./components/dataStoreLab/FakeKanban";
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
 export default class App extends React.Component {
   state = {
     pages: [
@@ -14,6 +16,7 @@ export default class App extends React.Component {
       <MapDataLab />,
       <BagLab />,
       <MusicPlayer />,
+      <FakeKanban />,
     ],
     curPage: null,
   };
@@ -25,15 +28,20 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>React Labs</h1>
-        <div>
-          <button onClick={() => this.swapProject(0)}>Recipe Search</button>
-          <button onClick={() => this.swapProject(1)}>Animation Lab</button>
-          <button onClick={() => this.swapProject(2)}>Map Data Lab</button>
-          <button onClick={() => this.swapProject(3)}>Bag Lab</button>
-          <button onClick={() => this.swapProject(4)}>Music Player Lab</button>
-        </div>
-        {this.state.pages[this.state.curPage]}
+        <DndProvider backend={HTML5Backend}>
+          <h1>React Labs</h1>
+          <div>
+            <button onClick={() => this.swapProject(0)}>Recipe Search</button>
+            <button onClick={() => this.swapProject(1)}>Animation Lab</button>
+            <button onClick={() => this.swapProject(2)}>Map Data Lab</button>
+            <button onClick={() => this.swapProject(3)}>Bag Lab</button>
+            <button onClick={() => this.swapProject(4)}>
+              Music Player Lab
+            </button>
+            <button onClick={() => this.swapProject(5)}>Data Store Lab</button>
+          </div>
+          {this.state.pages[this.state.curPage]}
+        </DndProvider>
       </div>
     );
   }
