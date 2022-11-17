@@ -8,6 +8,7 @@ import MusicPlayer from "./components/MusicPlayerLab/MusicPlayer";
 import FakeKanban from "./components/dataStoreLab/FakeKanban";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
+import ThreeFiberLab from "./components/ThreeFiberLab/ThreeFiberLab";
 export default class App extends React.Component {
   state = {
     pages: [
@@ -17,6 +18,7 @@ export default class App extends React.Component {
       <BagLab />,
       <MusicPlayer />,
       <FakeKanban />,
+      <ThreeFiberLab />
     ],
     curPage: null,
   };
@@ -39,6 +41,7 @@ export default class App extends React.Component {
               Music Player Lab
             </button>
             <button onClick={() => this.swapProject(5)}>Data Store Lab</button>
+            <button onClick={() => this.swapProject(6)}>Three Fiber Lab</button>
           </div>
           {this.state.pages[this.state.curPage]}
         </DndProvider>
