@@ -9,6 +9,7 @@ import FakeKanban from "./components/dataStoreLab/FakeKanban";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import ThreeFiberLab from "./components/ThreeFiberLab/ThreeFiberLab";
+import ApiLab from "./components/ApiLab/ApiLab";
 export default class App extends React.Component {
   state = {
     pages: [
@@ -18,7 +19,8 @@ export default class App extends React.Component {
       <BagLab />,
       <MusicPlayer />,
       <FakeKanban />,
-      <ThreeFiberLab />
+      <ThreeFiberLab />,
+      <ApiLab />,
     ],
     curPage: null,
   };
@@ -42,6 +44,7 @@ export default class App extends React.Component {
             </button>
             <button onClick={() => this.swapProject(5)}>Data Store Lab</button>
             <button onClick={() => this.swapProject(6)}>Three Fiber Lab</button>
+            <button onClick={() => this.swapProject(7)}>Api Lab</button>
           </div>
           {this.state.pages[this.state.curPage]}
         </DndProvider>
